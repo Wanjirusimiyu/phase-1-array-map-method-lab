@@ -14,3 +14,14 @@ const tutorials = [
 const titleCased = () => {
   return tutorials
 }
+function titleCased() {
+ return tutorials.map(tutorial => { 
+  let words = tutorial.split(' ');
+  
+  words = words.map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+  return words.join(' ');
+
+ });
+}
